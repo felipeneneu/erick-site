@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #020202;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        font-size: 52.4px;
+      }
+
+      .cls-4, .cls-3 {
+        fill: #fff004;
+      }
+
+      .cls-4, .cls-5 {
+        font-family: Poppins-Black, Poppins;
+        font-weight: 800;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #ffff05;
+      }
+
+      .cls-5 {
+        font-size: 29.9px;
+      }
+    </style>
+    <path id="path" d="M445.3,253.3c0,104.5-84.7,189.3-189.3,189.3s-189.3-84.7-189.3-189.3S151.5,64,256,64s189.3,84.7,189.3,189.3Z"/>
+    <path id="path-2" d="M66.7,258.7c0-104.5,84.7-189.3,189.3-189.3s189.3,84.7,189.3,189.3-84.7,189.3-189.3,189.3-189.3-84.7-189.3-189.3Z"/>
+  </defs>
+  <circle class="cls-2" cx="256" cy="256" r="251.8"/>
+  <circle class="cls-1" cx="256" cy="256" r="234.8"/>
+  <circle class="cls-2" cx="256" cy="256" r="178"/>
+  <text>
+    <textPath startOffset="17400%" xlink:href="#path"><tspan class="cls-5"><tspan x="0" y="0" xml:space="preserve">KRAV MAGA JAÚ     KRAV MAGA JAÚ     </tspan></tspan>
+    </textPath></text>
+  <text>
+    <textPath startOffset="17400%" xlink:href="#path-2"><tspan class="cls-5"><tspan x="0" y="0" xml:space="preserve">KRAV MAGA JAÚ     KRAV MAGA JAÚ     </tspan></tspan>
+    </textPath></text>
+  <circle class="cls-1" cx="256" cy="256" r="163.3"/>
+  <path class="cls-3" d="M170.4,230.4l18.4-8.2v37.6s73.4-26.6,132.6-10.3c59.2,16.3,63.8,58.2,56.4,74.1-7.4,16-38.3,50-38.3,50h-125.9v-17s44-13.1,52.5-33c8.5-19.9-78-16.3-78-16.3v41.5h-17.7v-39.7s-31.2,1.1-53.2,13.5c0,0,46-32.6,131.7-24.6,85.7,8,24.7,38.8,24.7,38.8l-34.4,18.4h90.8s21.6-28.7,11.3-53.9c-10.3-25.2-56.7-41.8-109.9-37.2-53.2,4.6-107.4,33.9-107.4,33.9l48.6-30.3-2.1-37.2Z"/>
+  <text class="cls-4" transform="translate(168.8 189.1)"><tspan x="0" y="0">ERICK</tspan></text>
+</svg>
