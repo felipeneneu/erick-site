@@ -1,13 +1,11 @@
 import heroImage from "@/public/assets/hero-krav.jpg";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
+import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
 
 
 const HeroSection = () => {
-  const WHATSAPP_LINK =
-    "https://wa.me/5514991867781?text=Olá%20Erick!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20minha%20aula%20gratuita%20de%20Krav%20Maga%20na%20Bob%20Fit.";
   return (
     <section
       id="inicio"
@@ -64,13 +62,17 @@ const HeroSection = () => {
             Agendar Aula Experimental Grátis
           </Link>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="h-12 w-full border-white/30 bg-white/5 px-6 font-display text-sm uppercase tracking-[0.12em] text-white hover:bg-white/15 sm:h-14 sm:w-auto sm:px-8 sm:text-base"
+          <Link
+            href="#beneficios"
+            className={buttonVariants({
+              variant: "outline",
+              size: "lg",
+              className:
+                "h-12 w-full border-white/30 bg-white/5 px-6 font-display text-sm uppercase tracking-[0.12em] text-white hover:bg-white/15 sm:h-14 sm:w-auto sm:px-8 sm:text-base",
+            })}
           >
             Conhecer o Método
-          </Button>
+          </Link>
         </div>
 
         <p className="mt-6 text-sm text-white/75 font-body animate-fade-in">

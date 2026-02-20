@@ -1,8 +1,9 @@
 "use client";
 
+import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import {
   Drawer,
@@ -46,21 +47,27 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button size="sm" className="font-display uppercase tracking-wider">
+          <Link
+            href={WHATSAPP_LINK}
+            className={buttonVariants({
+              className: "font-display uppercase tracking-wider",
+              size: "sm",
+            })}
+          >
             Aula Experimental
-          </Button>
+          </Link>
         </div>
 
         <Drawer open={open} onOpenChange={setOpen} direction="right">
           <DrawerTrigger asChild>
-            <button
+            <Button
               type="button"
               className="inline-flex items-center justify-center rounded-md border border-border/80 bg-card p-2 text-foreground lg:hidden"
               aria-label={open ? "Fechar menu" : "Abrir menu"}
               aria-expanded={open}
             >
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
-            </button>
+            </Button>
           </DrawerTrigger>
 
           <DrawerContent className="lg:hidden">
@@ -88,9 +95,17 @@ const Navbar = () => {
               </div>
 
               <DrawerClose asChild>
-                <Button className="mt-4 w-full font-display uppercase tracking-wider">
+                <Link
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({
+                    className:
+                      "mt-4 w-full font-display uppercase tracking-wider",
+                  })}
+                >
                   Agendar Aula Gratuita
-                </Button>
+                </Link>
               </DrawerClose>
             </div>
           </DrawerContent>

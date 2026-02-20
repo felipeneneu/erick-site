@@ -1,8 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
-    <section id="aula-gratis" className="py-20 md:py-24 relative overflow-hidden">
+    <section
+      id="aula-gratis"
+      className="py-20 md:py-24 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-linear-to-b from-background via-primary/5 to-background" />
       <div className="relative z-10 container mx-auto px-4 text-center reveal">
         <h2 className="font-display text-4xl md:text-6xl font-bold uppercase mb-6 leading-tight">
@@ -15,12 +20,16 @@ const CtaSection = () => {
           desenvolver confiança, disciplina e segurança real.
         </p>
         <div className="flex flex-col items-center gap-6">
-          <Button
-            size="lg"
-            className="font-display uppercase tracking-wider text-lg px-12 py-8 glow-red bg-primary hover:bg-primary/90"
+          <Link
+            href={WHATSAPP_LINK}
+            className={buttonVariants({
+              size: "lg",
+              className:
+                "font-display uppercase tracking-wider text-lg px-12 py-8 glow-red bg-primary hover:bg-primary/90",
+            })}
           >
             Quero Minha Aula Gratuita
-          </Button>
+          </Link>
 
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-muted-foreground font-body">
             <span className="flex items-center">
