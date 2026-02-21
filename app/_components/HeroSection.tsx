@@ -19,7 +19,7 @@ const HeroSection = () => {
         src={heroImage}
         alt="Treinamento de Krav Maga em Jaú - Coach Erick Reghine"
         fill
-        className="object-cover"
+        className="hero-image-zoom object-cover"
         priority
       />
       <div className="absolute inset-0 hero-overlay bg-black/50" />
@@ -89,3 +89,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

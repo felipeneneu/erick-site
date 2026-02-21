@@ -9,14 +9,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           {/* Logo / Nome */}
-          <Image
-            src={logo}
-            alt="Logo Erick Reghine"
-            width={140}
-            height={140}
-            className="mb-4"
-          />
-          <p className="font-display text-xl font-bold uppercase tracking-wider text-foreground mb-2">
+
+          <p className="font-display text-4xl font-bold uppercase tracking-wider text-foreground mb-2">
             ERICK<span className="text-primary"> REGHINE</span>
           </p>
 

@@ -1,10 +1,13 @@
 import { Clock, MapPin, Users, CalendarDays } from "lucide-react";
 
 const schedule = [
-  { day: "Segunda", time: "Consulte", level: "Todos os Níveis" },
-  { day: "Quarta", time: "Consulte", level: "Todos os Níveis" },
-  { day: "Sexta", time: "Consulte", level: "Avançado" },
-  { day: "Sábado", time: "Consulte", level: "Turma Mista" },
+  { day: "Segunda-feira", time: "20:00 – 21:00", level: "Todos os Níveis" },
+  { day: "Quarta-feira", time: "20:00 – 21:00", level: "Todos os Níveis" },
+  {
+    day: "Palestras / Workshops",
+    time: "Sob Agendamento",
+    level: "Corporativo",
+  },
 ];
 
 const ClassInfoSection = () => {
