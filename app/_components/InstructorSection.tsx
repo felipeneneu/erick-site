@@ -41,6 +41,13 @@ export const InstructorSection = () => {
                 Maga e Defesa Pessoal em Jaú/SP. Bacharel e Licenciado em
                 Educação Física, ele une o rigor técnico à ciência do movimento.
               </p>
+              <p>
+                Instrutor credenciado pela <strong>Polícia Federal</strong> e
+                Pós-Graduado em Estratégias de Enfrentamento à Violência, Erick
+                foca em uma abordagem prática: preparar pessoas comuns para
+                situações reais, priorizando a inteligência emocional e a
+                prontidão sobre técnicas meramente estéticas.
+              </p>
 
               {/* Nova Grade de Formação Técnica */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-white/5 p-6 rounded-xl border border-white/10">

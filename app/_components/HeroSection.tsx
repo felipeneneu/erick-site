@@ -45,6 +45,7 @@ const HeroSection = () => {
           confiança, preparo físico e segurança real para você e sua família.
         </p>
 
+
         <div
           className="mx-auto flex w-full max-w-xl flex-col justify-center gap-3 sm:flex-row animate-fade-up"
           style={{ animationDelay: "0.4s" }}

@@ -2,21 +2,21 @@ import { Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const avatar = [
-  "https://randomuser.me/api/portraits/men/32.jpg",
-  "https://randomuser.me/api/portraits/women/44.jpg",
-  "https://randomuser.me/api/portraits/men/22.jpg",
+  "/avatares/xanda.png",
+  "/avatares/nana.png",
+  "/avatares/malucao.png",
 ];
 
 const testimonials = [
   {
-    name: "Ricardo M.",
-    role: "Aluno há 8 meses",
+    name: "Alexandra",
+    role: "Aluno há 9 meses",
     quote:
-      "Cheguei sem experiência nenhuma e confesso que tinha receio. Hoje me sinto muito mais seguro e confiante no meu dia a dia. A didática do Erick é impecável.",
+      "Cheguei sem experiência nenhuma e confesso que tinha receio. Hoje me sinto muito mais segura e confiante no meu dia a dia. A didática do Erick é impecável.",
     avatar: avatar[0],
   },
   {
-    name: "Juliana T.",
+    name: "Jane Oliveira",
     role: "Aluna há 1 ano",
     quote:
       "Como mulher, aprender defesa pessoal real foi libertador. O ambiente na Bob Fit é respeitoso e as aulas nos preparam para situações que realmente podem acontecer.",

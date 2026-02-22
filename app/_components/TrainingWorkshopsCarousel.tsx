@@ -10,28 +10,28 @@ const CAROUSEL_ITEMS = [
     title: "Treinamento de defesa pessoal",
     description:
       "Tecnicas praticas para reacao rapida em situacoes reais de risco.",
-    src: "/carousel/22c3ed7e-1859-4285-8bc8-199323db2c65.jfif",
+    src: "/carousel/1.webp",
     alt: "Treinamento de defesa pessoal em aula pratica de Krav Maga",
   },
   {
     title: "Workshop de fundamentos",
     description:
       "Aulas guiadas para iniciantes com base tecnica e controle emocional.",
-    src: "/carousel/53153396-4272-43b1-a525-2cd8c3e5f992.jfif",
+    src: "/carousel/2.webp",
     alt: "Workshop de fundamentos com orientacao tecnica em grupo",
   },
   {
     title: "Workshop tatico aplicado",
     description:
       "Simulacoes de cenarios para desenvolver reflexo, estrategia e confianca.",
-    src: "/carousel/6e1f75c2-c6d5-4b46-ada7-9857b5f4573d.jfif",
+    src: "/carousel/3.webp",
     alt: "Aplicacoes taticas em workshop de Krav Maga com instrutor",
   },
   {
     title: "Treino tecnico de Krav Maga",
     description:
       "Treinamento tecnico com foco em postura, precisao e resposta sob pressao.",
-    src: "/carousel/8ee767ee-9ac0-42ee-8ea5-779f4da26c03.jfif",
+    src: "/carousel/4.webp",
     alt: "Treino tecnico de Krav Maga durante atividade orientada",
   },
 ] as const;
