@@ -9,19 +9,20 @@ import instructorImg from "@/public/assets/instructor.webp";
 
 const MARTIAL_GRADUATIONS = [
   "Faixa Preta de Karatê",
-  "Instrutor de Boxe",
-  "Instrutor de Krav Maga, Kapap e Ju-Jutsu",
-  "Especialização em técnicas com lâminas",
-  "Graduado em Judô, Jiu-Jitsu, Kung-Fu, Kobudo e Capoeira",
+  "Instrutor de: ",
+  "Boxe, Krav Maga, Kapap e Ju-Jutsu, técnicas com lâminas",
+  "Graduado em: ",
+  "Judô, Jiu-Jitsu, Kung-Fu, Kobudo e Capoeira",
 ];
 
 const COURSES_AND_CERTIFICATIONS = [
   "Bacharel e Licenciado em Educação Física",
-  "Pós-graduado em Iniciação e Treinamentos em Lutas",
-  "Pós-graduado em Estratégias de Enfrentamento à Violência",
-  "Defesa pessoal aplicada à segurança pública e privada",
-  "Formação continuada em metodologia de defesa pessoal aplicada",
-  "Treinamentos para cenários urbanos e corporativos de risco",
+  "Pós-graduado em: ",
+  "Iniciação e treinamentos em Lutas",
+  "Estratégia de enfrentamento a violência",
+  "Defesa pessoal aplicada a segurança pública e privada",
+  "Krav Maga, sistema de defesa pessoal Israelense",
+  "Inteligência emocional e comunicação eficaz",
 ];
 
 const ACCREDITATION = [
@@ -42,7 +43,11 @@ export const InstructorSection = () => {
         : ACCREDITATION;
 
   return (
-    <section id="sobre" className="bg-background py-24" aria-labelledby="instrutor-title">
+    <section
+      id="sobre"
+      className="bg-background py-24"
+      aria-labelledby="instrutor-title"
+    >
       <div className="container mx-auto px-4">
         <div className="mx-auto grid grid-cols-1 items-center gap-16 px-2 lg:grid-cols-2">
           <div className="relative">
@@ -88,7 +93,11 @@ export const InstructorSection = () => {
               </p>
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-5">
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3" role="tablist" aria-label="Formação do instrutor">
+                <div
+                  className="grid grid-cols-1 gap-3 sm:grid-cols-3"
+                  role="tablist"
+                  aria-label="Formação do instrutor"
+                >
                   <Button
                     type="button"
                     role="tab"
@@ -117,7 +126,7 @@ export const InstructorSection = () => {
                         : "bg-black/30 text-zinc-300 hover:bg-black/50"
                     }`}
                   >
-                    Cursos e Certificações
+                    Formação Academica
                   </Button>
                   <Button
                     type="button"

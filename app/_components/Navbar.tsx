@@ -58,19 +58,20 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <Link
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={buttonVariants({
-            className: "font-display uppercase tracking-wider",
-            size: "sm",
-          })}
-          aria-label="Agendar aula experimental pelo WhatsApp"
-        >
-          Aula Experimental
-        </Link>
-
+        <div className="hidden md:block">
+          <Link
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({
+              className: "font-display uppercase tracking-wider ",
+              size: "sm",
+            })}
+            aria-label="Agendar aula experimental pelo WhatsApp"
+          >
+            Aula Experimental
+          </Link>
+        </div>
         <Drawer open={open} onOpenChange={setOpen} direction="right">
           <DrawerTrigger asChild>
             <Button
