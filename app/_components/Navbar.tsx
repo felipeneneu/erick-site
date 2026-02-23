@@ -1,10 +1,9 @@
 "use client";
 
-import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import {
   Drawer,
   DrawerClose,
@@ -14,11 +13,17 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
+import { IoIosArrowDown } from "react-icons/io";
 
 const links = [
   { name: "Início", id: "inicio" },
   { name: "Benefícios", id: "beneficios" },
-  { name: "Instrutor", id: "instrutor" },
+  { name: "Instrutor", id: "sobre" },
+  { name: "Galeria", id: "treinamentos-workshops" },
+  { name: "Vídeo", id: "video" },
+  { name: "Workshops", id: "workshops" },
+  { name: "Dúvidas", id: "duvidas" },
   { name: "Horários", id: "horarios" },
   { name: "Depoimentos", id: "depoimentos" },
   { name: "Contato", id: "contato" },
@@ -28,35 +33,43 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-xl">
+    <nav
+      className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-xl"
+      aria-label="Navegação principal"
+    >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
         <Link
           href="#inicio"
           className="font-display text-base font-bold uppercase tracking-[0.14em] text-foreground sm:text-lg"
+          aria-label="Voltar para o início da página"
         >
           ERICK <span className="text-primary">REGHINE</span>
         </Link>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           {links.map((link) => (
             <Link
               key={link.id}
               href={`#${link.id}`}
-              className="font-display text-[11px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-foreground"
+              className="font-display text-[10px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground flex gap-2 items-center"
             >
+              <IoIosArrowDown className="text-red-500" />
               {link.name}
             </Link>
           ))}
-          <Link
-            href={WHATSAPP_LINK}
-            className={buttonVariants({
-              className: "font-display uppercase tracking-wider",
-              size: "sm",
-            })}
-          >
-            Aula Experimental
-          </Link>
         </div>
+        <Link
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={buttonVariants({
+            className: "font-display uppercase tracking-wider",
+            size: "sm",
+          })}
+          aria-label="Agendar aula experimental pelo WhatsApp"
+        >
+          Aula Experimental
+        </Link>
 
         <Drawer open={open} onOpenChange={setOpen} direction="right">
           <DrawerTrigger asChild>

@@ -1,86 +1,165 @@
-import instructorImg from "@/public/assets/instructor.png";
+"use client";
+
+import { Award, Instagram } from "lucide-react";
 import Image from "next/image";
-import { Instagram, Award } from "lucide-react"; // Adicionei ícones de prêmio e insta
 import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import instructorImg from "@/public/assets/instructor.webp";
+
+const MARTIAL_GRADUATIONS = [
+  "Faixa Preta de Karatê",
+  "Instrutor de Boxe",
+  "Instrutor de Krav Maga, Kapap e Ju-Jutsu",
+  "Especialização em técnicas com lâminas",
+  "Graduado em Judô, Jiu-Jitsu, Kung-Fu, Kobudo e Capoeira",
+];
+
+const COURSES_AND_CERTIFICATIONS = [
+  "Bacharel e Licenciado em Educação Física",
+  "Pós-graduado em Iniciação e Treinamentos em Lutas",
+  "Pós-graduado em Estratégias de Enfrentamento à Violência",
+  "Defesa pessoal aplicada à segurança pública e privada",
+  "Formação continuada em metodologia de defesa pessoal aplicada",
+  "Treinamentos para cenários urbanos e corporativos de risco",
+];
+
+const ACCREDITATION = [
+  "Instrutor credenciado pela Polícia Federal",
+  "Instrutor de defesa pessoal pela Confederação Brasileira de Artes Marciais",
+];
 
 export const InstructorSection = () => {
+  const [activeTab, setActiveTab] = useState<
+    "graduacoes" | "cursos" | "credenciamento"
+  >("graduacoes");
+
+  const tabItems =
+    activeTab === "graduacoes"
+      ? MARTIAL_GRADUATIONS
+      : activeTab === "cursos"
+        ? COURSES_AND_CERTIFICATIONS
+        : ACCREDITATION;
+
   return (
-    <section id="sobre" className="py-24 bg-background">
+    <section id="sobre" className="bg-background py-24" aria-labelledby="instrutor-title">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="mx-auto grid grid-cols-1 items-center gap-16 px-2 lg:grid-cols-2">
           <div className="relative">
-            <div className="aspect-3/4 rounded-lg overflow-hidden border border-white/10 shadow-2xl">
+            <div className="aspect-3/4 overflow-hidden rounded-lg border border-white/10 shadow-2xl">
               <Image
                 src={instructorImg}
-                alt="Coach Erick Reghine - Instrutor Destaque Jaú"
-                className="w-full h-full object-cover"
+                alt="Instrutor Erick Reghine em aula de Krav Maga em Jaú"
+                className="h-full w-full object-cover"
               />
             </div>
-            {/* Badge de Destaque Jaú */}
-            <div className="absolute -top-4 -left-4 bg-primary p-4 rounded-lg shadow-xl flex items-center gap-3 animate-bounce-slow">
-              <Award className="text-white size-8" />
-              <div className="text-white font-display text-xs font-bold uppercase leading-tight">
-                Instrutor Destaque <br /> Jaú 2024
+            <div className="absolute -left-4 -top-4 flex items-center gap-3 rounded-lg bg-primary p-4 shadow-xl">
+              <Award className="size-8 text-white" />
+              <div className="font-display text-xs font-bold uppercase leading-tight text-white">
+                Instrutor Destaque
+                <br />
+                Jaú 2026
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-primary rounded-lg -z-10" />
+            <div className="-z-10 absolute -bottom-4 -right-4 h-24 w-24 rounded-lg border-2 border-primary" />
           </div>
 
           <div>
-            <p className="text-white text-center font-display uppercase tracking-[0.3em] text-sm md:text-base mb-3 ">
-              Conheça seu Instrutor
+            <p className="mb-3 text-center font-display text-sm uppercase tracking-[0.3em] text-white md:text-base">
+              Instrutor altamente qualificado
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold uppercase mb-6 text-center">
+            <h2
+              id="instrutor-title"
+              className="mb-6 text-center font-display text-4xl font-bold uppercase md:text-6xl"
+            >
               <span className="text-gradient">Erick Reghine</span>
             </h2>
 
-            <div className="space-y-6 text-muted-foreground font-body leading-relaxed">
+            <div className="space-y-6 font-body leading-relaxed text-muted-foreground">
               <p>
                 Com mais de <strong>20 anos de experiência</strong> em artes
-                marciais, Erick Reghine é uma das maiores referências em Krav
-                Maga e Defesa Pessoal em Jaú/SP. Bacharel e Licenciado em
-                Educação Física, ele une o rigor técnico à ciência do movimento.
+                marciais, Erick Reghine é uma das principais referências em Krav
+                Maga e defesa pessoal em Jaú/SP.
               </p>
               <p>
-                Instrutor credenciado pela <strong>Polícia Federal</strong> e
-                Pós-Graduado em Estratégias de Enfrentamento à Violência, Erick
-                foca em uma abordagem prática: preparar pessoas comuns para
-                situações reais, priorizando a inteligência emocional e a
-                prontidão sobre técnicas meramente estéticas.
+                Sua metodologia une técnica, condicionamento e leitura de
+                contexto para preparar pessoas comuns para situações reais, com
+                foco em controle emocional e tomada de decisão sob pressão.
               </p>
 
-              {/* Nova Grade de Formação Técnica */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-white/5 p-6 rounded-xl border border-white/10">
-                <div>
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-primary rounded-full" />{" "}
-                    Formação Marcial
-                  </h4>
-                  <ul className="space-y-1 opacity-80">
-                    <li>• Faixa Preta de Karatê</li>
-                    <li>• Instrutor de Boxe</li>
-                    <li>• Krav Maga, Kapap e Ju-Jutsu</li>
-                    <li>• Especialista em Lâminas</li>
-                  </ul>
+              <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3" role="tablist" aria-label="Formação do instrutor">
+                  <Button
+                    type="button"
+                    role="tab"
+                    id="tab-graduacoes"
+                    aria-controls="panel-graduacoes"
+                    aria-selected={activeTab === "graduacoes"}
+                    onClick={() => setActiveTab("graduacoes")}
+                    className={`cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
+                      activeTab === "graduacoes"
+                        ? "bg-primary text-white"
+                        : "bg-black/30 text-zinc-300 hover:bg-black/50"
+                    }`}
+                  >
+                    Graduações Marciais
+                  </Button>
+                  <Button
+                    type="button"
+                    role="tab"
+                    id="tab-cursos"
+                    aria-controls="panel-cursos"
+                    aria-selected={activeTab === "cursos"}
+                    onClick={() => setActiveTab("cursos")}
+                    className={`cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
+                      activeTab === "cursos"
+                        ? "bg-primary text-white"
+                        : "bg-black/30 text-zinc-300 hover:bg-black/50"
+                    }`}
+                  >
+                    Cursos e Certificações
+                  </Button>
+                  <Button
+                    type="button"
+                    role="tab"
+                    id="tab-credenciamento"
+                    aria-controls="panel-credenciamento"
+                    aria-selected={activeTab === "credenciamento"}
+                    onClick={() => setActiveTab("credenciamento")}
+                    className={`cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
+                      activeTab === "credenciamento"
+                        ? "bg-primary text-white"
+                        : "bg-black/30 text-zinc-300 hover:bg-black/50"
+                    }`}
+                  >
+                    Credenciamento
+                  </Button>
                 </div>
-                <div>
-                  <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-primary rounded-full" />{" "}
-                    Graduações
-                  </h4>
-                  <ul className="space-y-1 opacity-80">
-                    <li>• Judô e Jiu-Jitsu</li>
-                    <li>• Kung-Fu e Kobudo</li>
-                    <li>• Capoeira</li>
-                  </ul>
-                </div>
+
+                <ul
+                  className="mt-4 space-y-2 text-sm text-zinc-200"
+                  role="tabpanel"
+                  id={`panel-${activeTab}`}
+                  aria-labelledby={`tab-${activeTab}`}
+                >
+                  {tabItems.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span
+                        className="mt-2 inline-block h-2 w-2 rounded-full bg-primary"
+                        aria-hidden="true"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* Botão Instagram */}
               <Link
                 href="https://instagram.com/erickreghine"
                 target="_blank"
-                className="inline-flex items-center gap-3 text-white hover:text-primary transition-colors font-display text-sm font-bold uppercase tracking-wider"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:text-primary"
+                aria-label="Abrir Instagram do instrutor Erick Reghine"
               >
                 <Instagram className="size-5" /> Siga no Instagram @erickreghine
               </Link>

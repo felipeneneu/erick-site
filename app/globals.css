@@ -131,6 +131,12 @@ html {
     will-change: transform;
   }
 
+  @media (max-width: 768px) {
+    .hero-image-zoom {
+      animation: none;
+    }
+  }
+
   .section-gradient {
     background: linear-gradient(
       180deg,
@@ -155,6 +161,53 @@ html {
 
   .glow-red {
     box-shadow: 0 0 30px oklch(0.579 0.214 27.166 / 0.3), 0 0 60px oklch(0.579 0.214 27.166 / 0.1);
+  }
+
+  .quote-line {
+    text-wrap: balance;
+  }
+
+  .quote-word {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .reveal.is-visible .quote-animated .quote-word {
+    animation: quote-word-in 0.65s ease-out forwards;
+  }
+
+  .cta-shell .cta-blob-left,
+  .cta-shell .cta-blob-right {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(48px);
+    will-change: transform;
+  }
+
+  .cta-shell .cta-blob-left {
+    top: 2rem;
+    left: -5rem;
+    width: 15rem;
+    height: 15rem;
+    background: oklch(0.579 0.214 27.166 / 0.2);
+    animation: cta-blob-left 8s ease-in-out infinite;
+  }
+
+  .cta-shell .cta-blob-right {
+    right: -2rem;
+    bottom: -5rem;
+    width: 18rem;
+    height: 18rem;
+    background: oklch(0.637 0.208 25.326 / 0.18);
+    animation: cta-blob-right 10s ease-in-out infinite;
+  }
+
+  .cta-button {
+    transition: transform 220ms ease;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.03);
   }
 
   .reveal {
@@ -199,6 +252,22 @@ html {
     .hero-image-zoom {
       animation: none;
     }
+
+    .quote-word {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    .cta-shell .cta-blob-left,
+    .cta-shell .cta-blob-right {
+      animation: none;
+    }
+
+    .cta-button:hover {
+      transform: none;
+    }
+
   }
 }
 
@@ -219,5 +288,41 @@ html {
 
   to {
     transform: scale(1.08);
+  }
+}
+
+@keyframes quote-word-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cta-blob-left {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(2.25rem, -1.1rem) scale(1.08);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cta-blob-right {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-1.85rem, 1.2rem) scale(1.12);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
   }
 }

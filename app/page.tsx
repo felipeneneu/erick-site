@@ -8,10 +8,13 @@ import ClassInfoSection from "./_components/ClassInfoSection";
 import CtaSection from "./_components/CtaSection";
 import ScrollReveal from "./_components/ScrollReveal";
 import LocationSection from "./_components/LocationSection";
-import { TrustedBrand } from "./_components/TrustedBrand";
 import { SpecialistServices } from "./_components/SpecialistServices";
 import { Affiliations } from "./_components/Affiliations";
 import { TrainingWorkshopsCarousel } from "./_components/TrainingWorkshopsCarousel";
+import { VideoSection } from "./_components/VideoSection";
+import { WorkshopsSection } from "./_components/WorkshopsSection";
+import { FaqSection } from "./_components/FaqSection";
+import { ImpactQuoteSection } from "./_components/ImpactQuoteSection";
 
 export default function Home() {
   return (
@@ -20,11 +23,15 @@ export default function Home() {
       <main>
         <Navbar />
         <HeroSection />
+        <ImpactQuoteSection />
         <BenefitsSection />
         <InstructorSection />
         <Affiliations />
         <SpecialistServices />
         <TrainingWorkshopsCarousel />
+        <VideoSection />
+        <WorkshopsSection />
+        <FaqSection />
         <ClassInfoSection />
         <LocationSection />
         <TestimonialsSection />

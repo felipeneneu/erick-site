@@ -4,12 +4,12 @@ const SPECIALIST_SERVICES = [
     desc: "Palestras, workshops e treinamentos para porteiros, controladores de acesso e fiscais.",
   },
   {
-    title: "Seguranca Publica",
-    desc: "Capacitacao para guardas municipais e policiais civis e militares.",
+    title: "Segurança Pública",
+    desc: "Capacitação para guardas municipais e policiais civis e militares.",
   },
   {
     title: "Defesa Pessoal",
-    desc: "Cursos com foco em inteligencia emocional e enfrentamento a violencia.",
+    desc: "Cursos com foco em inteligência emocional e enfrentamento à violência.",
   },
 ] as const;
 
@@ -24,7 +24,7 @@ export const SpecialistServices = () => {
           id="specialist-services-title"
           className="mb-12 text-center font-display text-2xl font-bold uppercase tracking-widest text-primary"
         >
-          Especialista em Treinamentos Corporativos e Taticos
+          Especialista em Treinamentos Corporativos e Táticos
         </h2>
 
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 text-center md:grid-cols-3">

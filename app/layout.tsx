@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
-import "./globals.css";
-import { ButtonWhatsapp } from "./_components/button-whatsappp";
 import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
+import { ButtonWhatsapp } from "./_components/button-whatsappp";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,49 +28,52 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-
   title: {
-    default: "Krav Maga em Jaú/SP | Coach Erick Reghine",
+    default: "Krav Maga em Jaú/SP | Instrutor Erick Reghine",
     template: "%s | Krav Maga Jaú/SP",
   },
   description:
-    "Aulas de Krav Maga em Jaú/SP com Coach Erick Reghine. Defesa pessoal real, treino para iniciantes e aula experimental gratuita na Academia Bob Fit.",
+    "Aulas de Krav Maga em Jaú/SP com o Instrutor Erick Reghine. Defesa pessoal real, treino para iniciantes e aula experimental gratuita na Academia Bob Fit.",
   keywords: [
     "krav maga jaú",
     "krav maga jau sp",
     "defesa pessoal jaú",
     "aula de defesa pessoal em jaú",
-    "krav maga sp interior",
-    "coach erick reghine",
+    "krav maga interior de sp",
+    "instrutor erick reghine",
     "aula experimental krav maga",
-    "academia bob fit jau",
+    "academia bob fit jaú",
   ],
-  authors: [{ name: "Coach Erick Reghine" }],
-  creator: "Coach Erick Reghine",
+  authors: [{ name: "Instrutor Erick Reghine" }],
+  creator: "Instrutor Erick Reghine",
   publisher: "Krav Maga Jaú",
-  category: "Esportes e Defesa Pessoal",
+  category: "Esportes e defesa pessoal",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Krav Maga em Jaú/SP | Coach Erick Reghine",
+    title: "Krav Maga em Jaú/SP | Instrutor Erick Reghine",
     description:
       "Treinamento de Krav Maga em Jaú/SP com foco em defesa pessoal real, condicionamento e confiança para o dia a dia.",
+    url: siteUrl,
     type: "website",
     locale: "pt_BR",
     siteName: "Krav Maga Jaú",
     images: [
       {
-        url: "/assets/hero-krav.jpg",
+        url: "/assets/hero-krav.webp",
         width: 1200,
         height: 630,
-        alt: "Aula de Krav Maga em Jaú/SP com Coach Erick Reghine",
+        alt: "Aula de Krav Maga em Jaú/SP com o Instrutor Erick Reghine",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krav Maga em Jaú/SP | Coach Erick Reghine",
+    title: "Krav Maga em Jaú/SP | Instrutor Erick Reghine",
     description:
       "Defesa pessoal em Jaú/SP com metodologia prática e aula experimental gratuita.",
-    images: ["/assets/hero-krav.jpg"],
+    images: ["/assets/hero-krav.webp"],
   },
   robots: {
     index: true,

@@ -30,7 +30,7 @@ export const Affiliations = () => (
         id="affiliations-title"
         className="mb-8 text-center text-xs uppercase tracking-widest text-muted-foreground"
       >
-        Filiado a instituicoes de elite
+        Filiado a instituições de elite
       </h2>
 
       <ul className="flex flex-wrap items-center justify-center gap-12 opacity-60 grayscale transition-all hover:grayscale-0">
@@ -41,7 +41,7 @@ export const Affiliations = () => (
               href={item.href}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label={`Abrir afiliacao ${item.name}`}
+              aria-label={`Abrir afiliação ${item.name}`}
             >
               {item.name}
             </Link>
