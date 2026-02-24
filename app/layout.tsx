@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import { WHATSAPP_LINK } from "@/hooks/use-whatsapp-link";
 import { ButtonWhatsapp } from "./_components/button-whatsappp";
@@ -19,6 +20,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -103,6 +106,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
+        {gaId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        ) : null}
         <ButtonWhatsapp whatsappNumber={WHATSAPP_LINK} />
         {children}
       </body>
