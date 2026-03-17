@@ -42,9 +42,8 @@ const HeroSection = () => {
           style={{ animationDelay: "0.2s" }}
         >
           Aprenda o sistema de defesa pessoal mais eficiente do mundo com um
-          <strong> especialista credenciado pela Polícia Federal</strong>.
-          Ganhe confiança, preparo físico e segurança real para você e sua
-          família.
+          <strong> especialista credenciado pela Polícia Federal</strong>. Ganhe
+          confiança, preparo físico e segurança real para você e sua família.
         </p>
 
         <div
@@ -84,7 +83,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-bounce md:block">
+      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 animate-bounce md:block ">
         <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-muted-foreground/40 p-2">
           <div className="h-2 w-1 rounded-full bg-primary" />
         </div>
