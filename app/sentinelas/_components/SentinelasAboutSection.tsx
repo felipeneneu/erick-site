@@ -13,7 +13,11 @@ const instructorHighlights = [
 
 export function SentinelasAboutSection() {
   return (
-    <section id="sobre" className="bg-background py-24" aria-labelledby="instrutor-title">
+    <section
+      id="sobre"
+      className="bg-background py-24"
+      aria-labelledby="instrutor-title"
+    >
       <div className="container mx-auto px-4">
         <div className="mx-auto grid grid-cols-1 items-center gap-16 px-2 lg:grid-cols-2">
           <div className="relative">
@@ -43,30 +47,34 @@ export function SentinelasAboutSection() {
 
           <div>
             <p className="mb-3 text-center font-display text-sm uppercase tracking-[0.3em] text-white md:text-base">
-              O que é o Projeto Sentinelas?
+              Para Mulheres e adolescentes
             </p>
             <h2
               id="instrutor-title"
               className="mb-6 text-center font-display text-4xl font-bold uppercase md:text-6xl"
             >
-              <span className="text-pink-600">Mulheres e adolescentes</span>
+              <span className="text-pink-600">
+                O que é o Projeto Sentinelas?
+              </span>
             </h2>
 
             <div className="space-y-6 font-body leading-relaxed text-muted-foreground">
               <p>
-                O Projeto Sentinelas é uma iniciativa voltada para a proteção,
-                fortalecimento e desenvolvimento de mulheres e adolescentes por meio
-                da defesa pessoal.
+                O Projeto Sentinelas - Sempre em Alerta é uma iniciativa social
+                de impacto que visa promover a autodefesa, a segurança e o
+                fortalecimento psicológico e físico de mulheres, crianças e
+                adolescentes.
               </p>
               <p>
-                A condução mantém a história do <strong>Instrutor Erick Reghine</strong>,
-                com mais de <strong>20 anos de experiência</strong> em artes marciais,
-                aplicando uma metodologia prática, segura e acessível para quem está
-                começando.
+                Por meio de técnicas de defesa pessoal baseadas no Krav Maga e
+                em outras metodologias, buscamos empoderar nossas participantes,
+                diminuindo vulnerabilidades e promovendo a autoconfiança.
               </p>
               <p>
-                Aqui, você aprende técnicas reais, aplicáveis no dia a dia, com foco
-                em segurança, reação e consciência situacional.
+                Liderado pela <strong>Mestra Josiane Z. Alcântara</strong>,
+                presidente da ATTAC Holding e da WKMF South America, o projeto
+                conta com instrutores capacitados e com uma metodologia adaptada
+                às necessidades específicas de cada grupo.
               </p>
 
               <div className="rounded-xl border border-white/10 bg-white/5 p-5">
